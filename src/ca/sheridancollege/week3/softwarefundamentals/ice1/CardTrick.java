@@ -38,8 +38,8 @@ public class CardTrick {
         System.out.print("Enter the card number: ");
         int cardNumber = sc.nextInt();
         boolean cardFound = false;
-        for(int i = 0; i < magicHand.length; i++) {
-            if(magicHand[i].getValue() == cardNumber && luckyCard[i].getSuit().equals(cardSuit)) {
+        for(int i = 0; i < luckyCard.length; i++) {
+            if(luckyCard[i].getValue() == cardNumber && luckyCard[i].getSuit().equals(cardSuit)) {
                 System.out.println("Card found!");
                 System.out.println("Card Suit: "+ luckyCard[i].getSuit());
                 System.out.println("Card Value: "+ luckyCard[i].getValue());
@@ -48,6 +48,10 @@ public class CardTrick {
         }
         if(!cardFound) {
             System.out.println("Card not found!");
+        }
+        else
+        {
+            System.out.println("you loose");
         }
     }
 }
