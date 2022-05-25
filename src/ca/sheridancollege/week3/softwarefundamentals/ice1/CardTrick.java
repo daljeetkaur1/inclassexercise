@@ -20,10 +20,10 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Card[] magicHand = new Card[7];
+        Card[] luckyCard = new Card[7];
         Scanner sc = new Scanner(System.in);
         
-        for (int i=0; i<magicHand.length; i++)
+        for (int i=0; i<luckyCard.length; i++)
         {
             Random r = new Random();
             int number = r.nextInt(13) + 1;
@@ -31,7 +31,7 @@ public class CardTrick {
             c.setValue(number);
             int newNumber = r.nextInt(4);
             c.setSuit(Card.SUITS[newNumber]);
-            magicHand[i] = c;
+            luckyCard[i] = c;
         }
         System.out.print("Enter the card suit: ");
         String cardSuit = sc.nextLine();
@@ -39,10 +39,10 @@ public class CardTrick {
         int cardNumber = sc.nextInt();
         boolean cardFound = false;
         for(int i = 0; i < magicHand.length; i++) {
-            if(magicHand[i].getValue() == cardNumber && magicHand[i].getSuit().equals(cardSuit)) {
+            if(magicHand[i].getValue() == cardNumber && luckyCard[i].getSuit().equals(cardSuit)) {
                 System.out.println("Card found!");
-                System.out.println("Card Suit: "+ magicHand[i].getSuit());
-                System.out.println("Card Value: "+ magicHand[i].getValue());
+                System.out.println("Card Suit: "+ luckyCard[i].getSuit());
+                System.out.println("Card Value: "+ luckyCard[i].getValue());
                 cardFound = true;
             }
         }
